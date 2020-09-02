@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="styles/header-mobile.css" />
-		<link rel="stylesheet" href="styles/enquiry.css" />
+		<link rel="stylesheet" href="styles/style.css" />
 
 	</head>
 	
@@ -25,7 +25,7 @@
 		</a>
 		</p>
 		<p>
-		<a href="index.php">Home123</a>
+		<a href="index.php">Home</a>
 		<a href="postjobform.php">Post Job</a>
 		<a href="searchjobform.php" class="active">Search Job</a>
 		<a href="about.php">About</a>

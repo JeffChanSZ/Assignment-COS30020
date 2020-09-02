@@ -1,0 +1,109 @@
+/*
+filename: [CHAN SIAW ZHENG]
+author: [CHAN SIAW ZHENG]
+created: [31/8/2020]
+last modified: [2/9/2020]
+description: [CSS styles of PHP Assignment, Design of the website]
+*/
+
+    .directory {
+        background : grey;
+        padding :10px;
+        font-size: 14px;
+        
+    }
+
+    .directory a{
+        margin-left: 10px;
+    }
+
+
+    .banner-image{ 
+        padding-top: 75px;    
+        padding-bottom: 50px; 
+        text-align: center;     
+        color: rgb(255, 255, 255); 
+        background-image: url("../images/jobvacancy.jpeg");
+        background-color: #000000;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .banner-content{
+        
+        position:relative; 
+        padding-top: 6%; 
+        padding-bottom: 6%; 
+        margin-top: 12%; 
+        margin-bottom: 12%; 
+        background-color: rgba(0, 0, 0, 0.7); 
+        max-width: 660px;
+        overflow: hidden;
+
+    }
+
+    .banner-content .h1{
+
+        font-weight: bold;
+    }
+
+  /*header & menu*/
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+
+  .nav-bar {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .nav-bar img{
+      width: 50%;
+  }
+  
+  .nav-bar a {
+    float: left;
+    display: block;
+    color: #d1ffcc;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav-bar .icon {
+    display: none;
+  }
+  
+  .nav-bar a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    
+  }
+
+  /*footer*/
+  
+  .footer {
+      background-color :  rgb(0, 0, 0);
+      color: #d1ffcc;
+      padding: 20px;
+      box-sizing: border-box;
+      
+  }
+
+  .column {
+    float: left;
+    
+}
+  
+    .column-padding {
+        float: left;
+        padding-left: 500px;
+
+}
+
+
+  
