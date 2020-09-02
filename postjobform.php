@@ -56,7 +56,7 @@
 							<textarea class="desc" name="desc" rows="5" cols="30" ></textarea>
 						
 						<p><label for="date">Closing Date: </label> 
-							<input type="text" id="date" name= "date" />
+							<input type="date" id="date" name= "date" />
 						</p>
 
 						<p><label>Position: </label></p>
@@ -99,15 +99,14 @@
 			</fieldset>
 				
 				<p>
-					<input type="submit" name="submit" value="Submit" class="Post" onClick="setLocalStorage(); valthisform(); checkPos1(); validateEmptyFill();" />
-					<input type="submit" name="submit" value="Submit" class="Reset" onClick="setLocalStorage(); valthisform(); checkPos1(); validateEmptyFill();" />
+					<button type="submit" name="submit" value="Submit" class="Post" onClick="setLocalStorage(); valthisform(); checkPos1(); validateEmptyFill();">Post </button>
+					<button type="submit" name="submit" value="Submit" class="Reset" onClick="setLocalStorage(); valthisform(); checkPos1(); validateEmptyFill();">Reset </button>
 				</p>
 				
 			</form>
 			</div>
 	</section><!-- End of PostJob Form  section -->
 
-	<div class="parallax2"></div>
 		<!--Footer-->	
 		<?php 
 			include 'footer.inc';
