@@ -3,7 +3,7 @@
 
 	        <p><a class="logo" href ="index.php">
 
-		<img src="images/logo.jfif" alt="Logo" />
+		<img src="images/logo.jpeg" alt="Logo" />
 
 	            </a>
 	        </p>

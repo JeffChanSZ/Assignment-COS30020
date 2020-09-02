@@ -7,6 +7,7 @@
 		<meta name="author" content="ChanSiawZheng" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Job Vacancy Posting System</title>
+		<link rel="icon" href="images/logo.jpeg" type="image/x-icon" />
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -15,7 +16,7 @@
 	</head>
 	
 <body>
-
+<!--Header-->
 <?php 
 	include 'header.inc';
 ?>
@@ -23,7 +24,7 @@
 <?php 
 	include 'menu.inc';
 ?>
-
+<!--Header End-->
 	<div class="directory">
 		<div class="container">
 			<a href="index.php">Home </a>
