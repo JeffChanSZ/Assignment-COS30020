@@ -25,7 +25,7 @@
 		</a>
 		</p>
 		<p>
-		<a href="index.php">Home</a>
+		<a href="index.php">Home123</a>
 		<a href="postjobform.php">Post Job</a>
 		<a href="searchjobform.php" class="active">Search Job</a>
 		<a href="about.php">About</a>
