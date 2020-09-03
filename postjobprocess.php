@@ -18,7 +18,7 @@ $errMsg = "";
 
     }else {
       $errMsg .= "<p>Error ID: Empty ID Fill. </p>
-                  <p>Re-Enter ID in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
     
 
@@ -27,7 +27,7 @@ $errMsg = "";
 
     }else {
       $errMsg .= "<p>Error Title: Empty Title Fill. </p>
-                  <p>Re-Enter Title in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
 
     
@@ -37,7 +37,7 @@ $errMsg = "";
 
     }else {
       $errMsg .= "<p>Error Description: Empty Description Fill. </p>
-                  <p>Re-Enter Description in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
 
 
@@ -47,7 +47,7 @@ $errMsg = "";
 
     }else {
       $errMsg .= "<p>Error Date: Empty Date Fill. </p>
-                  <p>Re-Enter Date in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
     
 
@@ -57,7 +57,7 @@ $errMsg = "";
 
     }else {
       $errMsg .= "<p>Error Position: Empty Position Fill. </p>
-                  <p>Re-Enter Position in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
 
         
@@ -67,7 +67,7 @@ $errMsg = "";
 
     }else {
       $errMsg .= "<p>Error Contract: Empty Contract Fill. </p>
-                  <p>Re-Enter Contract in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
       
 
@@ -77,7 +77,7 @@ $errMsg = "";
 
     // }else {
     //   $errMsg .= "<p>Error Application: Empty Application Fill. </p>
-    //   <p>Re-Enter Application in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+    //   <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     // }
 
 
@@ -87,15 +87,15 @@ $errMsg = "";
 
     }else{
       $errMsg .= "<p>Error Location: Empty Location Fill. </p>
-                  <p>Re-Enter Location in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
 
 
-      validateFormat($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location);
+      validateFormat($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location, $errMsg);
 
 
       if ($errMsg != "") {
-        echo $errMsg;
+        echo "<p>$errMsg</p>";
         exit;
       }
       /**
@@ -108,23 +108,66 @@ $errMsg = "";
 
 
   //Data validaton here -- Format Checking
-  function validateFormat($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location){
+  function validateFormat($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location, $errMsg){
 
-      if( !preg_match ("/^[P]\d{4}$/", $ID)){
+      if ($ID=="") {
+      $errMsg .= "<p>Error ID: Empty ID Fill. </p>
+      <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+
+      }else if( !preg_match ("/^[P]\d{4}$/", $ID)){
         $errMsg .= "<p>Error ID: ID must start with an uppercase letter “P” followed by 4 digits. </p>
-                  <p>Re-Enter ID in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+        <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
       
       }else if(strlen($ID) != 5){
         $errMsg .= "<p>Error ID: ID must have 5 characters in length. </p>
-                  <p>Re-Enter ID in <a href=\"postjobform.php\"> Post Job Form </a></p></br>";
+        <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
 
       }
     
+      if ($Title=="") {
+        $errMsg .= "<p>Error Title: Empty Title Fill. </p>
+        <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";;
+  
+        }else if( !preg_match ("/^[a-zA-Z0-9,.! ]*$/", $Title)){
+          $errMsg .= "<p>Error Title: Title can only contain alphanumeric characters including spaces, comma, period, and exclamation point </p>
+          <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+        
+        }else if(strlen($Title) > 20){
+          $errMsg .= "<p>Error Title: Title can only contain a maximum of 20 alphanumeric characters </p>
+          <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+  
+        }
              
   
+      if ($Description=="") {
+        $errMsg .= "<p>Error Description: Empty Description Fill. </p>
+        <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+  
+        }else if(strlen($Description) > 260){
+          $errMsg .= "<p>Error Description: Description can only contain a maximum of 260 characters </p>
+          <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+  
+        }
+        
+      if ($Date=="") {
+        $errMsg .= "<p>Error Date: Empty Date Fill. </p>
+        <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+  
+        }else if(!isDate($Date)){
+          $errMsg .= "<p>Error Date: Date must be in format DD/MM/YY </p>
+          <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+  
+        }
   
   }
 
+  function isDate($Date) {
+    $matches = array();
+    $pattern = '/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{2})$/';
+    if (!preg_match($pattern, $Date, $matches)) return false;
+    if (!checkdate($matches[2], $matches[1], $matches[3])) return false;
+    return true;
+}
 
 
 

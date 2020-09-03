@@ -47,13 +47,14 @@
 			<fieldset>
 					<legend>Details</legend>
 						<p><label for="id">Position ID: </label> 
-							<input type="text" id="id" name= "id" required="required"/>
+							<input type="text" id="id" name= "id" placeholder="P0001" required="required"/>
 						</p>
 						<p><label for="title">Title: </label> 
-							<input type="text" id="title" name= "title" required="required"/>
+							<input type="text" id="title" name= "title" placeholder="IT Manager" required="required"/>
 						</p>
 						<p><label class="desc">Description: </label></p>  
-							<textarea class="desc" name="desc" rows="5" cols="30" required="required"></textarea>
+							<textarea class="desc" name="desc" rows="5" cols="30" placeholder="This position promotes and supports the use
+								of information technology throughout the organisation." required="required"></textarea>
 						
 						<p><label for="date">Closing Date: </label> 
 							<input type="text" id="date" name= "date" required="required"/>
@@ -103,7 +104,7 @@
 					<button type="submit" name="submit" value="Submit" class="Reset" >Reset </button>
 				</p>
 				
-				<p class="return"> All fields are required. <a href="index.php" class="return">Return to Home Page</a></p>
+				<p class="return"> All fields are required.<a href="index.php" class="returnIndex">Return to Home Page</a></p>
 			</form>
 			</div>
 	</section><!-- End of PostJob Form  section -->

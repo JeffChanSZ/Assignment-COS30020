@@ -202,3 +202,24 @@ description: [CSS styles of PHP Assignment, Design of the website]
         margin-bottom: 10px;
       }
     
+    .return {
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 15px;
+        width: 100%;
+        color: #000000;
+    }
+
+    .returnIndex {
+      font-size: 16px;
+      height: auto;
+      margin: 0;
+      outline: 0;
+      padding: 15px;
+      width: 100%;
+      color: blue;
+      font-weight: bold;
+      text-decoration: underline;
+  }
