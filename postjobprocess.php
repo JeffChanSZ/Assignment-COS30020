@@ -68,7 +68,6 @@ $errMsg = "";
     if (isset($_POST['app'])  && $_POST['app'] !="" ){
    
         $Application=$_POST['app'];
-        $_SESSION['app'] = $Application;
 
     }else {
         echo "<p>Error: Re-enter data in the <a href=\"postjobform.php\"> Post Job Form </a></p>";
@@ -78,13 +77,14 @@ $errMsg = "";
     if (isset($_POST['loc'])  && $_POST['loc'] !="" ){
    
         $Location=$_POST['loc'];
-        $_SESSION['loc'] = $Location;
 
     }else {
         echo "<p>Error: Re-enter data in the <a href=\"postjobform.php\"> Post Job Form </a></p>";
       }
-
-
+      /**
+       * IF NO Validation Error
+       */
+      saveDataToFile($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location);
   // validateEmptyFill($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location); 
 
 
@@ -102,6 +102,17 @@ $errMsg = "";
   
   // }
 
+  function saveDataToFile($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location){
+  //   echo $ID;
+  $folder = "../data/jobposts";
+  if (!is_dir($folder)) mkdir($folder, 0777, true);
+
+    $file = '../data/jobposts/jobposts.txt';
+
+    $contents = $ID . $Title . $Description . $Date . $Position . $Contract . $Application . $Location ."\r\n";           
+    file_put_contents($file, $contents,FILE_APPEND);     // Save our content to the file.
+  
+  }
 
 
 
