@@ -41,7 +41,7 @@
 
 		<h1>Job Vacancy Posting System</h1>
 
-			<form class="form" method="post" action="postjobprocess.php" onsubmit="return  validate()" novalidate="novalidate">
+			<form class="form" method="post" action="postjobprocess.php">
 			<br>
 			<br>
 			<fieldset>
@@ -50,13 +50,13 @@
 							<input type="text" id="id" name= "id" required="required"/>
 						</p>
 						<p><label for="title">Title: </label> 
-							<input type="text" id="title" name= "title" />
+							<input type="text" id="title" name= "title" required="required"/>
 						</p>
 						<p><label class="desc">Description: </label></p>  
-							<textarea class="desc" name="desc" rows="5" cols="30" ></textarea>
+							<textarea class="desc" name="desc" rows="5" cols="30" required="required"></textarea>
 						
 						<p><label for="date">Closing Date: </label> 
-							<input type="date" id="date" name= "date" />
+							<input type="text" id="date" name= "date" required="required"/>
 						</p>
 
 						<p><label>Position: </label></p>
@@ -99,10 +99,11 @@
 			</fieldset>
 				
 				<p>
-					<button type="submit" name="submit" value="Submit" class="Post" onClick="setLocalStorage(); valthisform(); checkPos1(); validateEmptyFill();">Post </button>
-					<button type="submit" name="submit" value="Submit" class="Reset" onClick="setLocalStorage(); valthisform(); checkPos1(); validateEmptyFill();">Reset </button>
+					<button type="submit" name="submit" value="Submit" class="Post" >Post </button>
+					<button type="submit" name="submit" value="Submit" class="Reset" >Reset </button>
 				</p>
 				
+				<p class="return"> All fields are required. <a href="index.php" class="return">Return to Home Page</a></p>
 			</form>
 			</div>
 	</section><!-- End of PostJob Form  section -->
