@@ -79,13 +79,13 @@
 
 						<p><label for="app">Application by: </label>
 						<p>
-							<label><input type="checkbox" name="issue[]" value="Post" />Post</label><br>
-							<label><input type="checkbox" name="issue[]" value="Mail" />Mail</label>
+							<label><input type="checkbox" name="app[]" value="Post" />Post</label><br>
+							<label><input type="checkbox" name="app[]" value="Mail" />Mail</label>
 						</p>
 
 						<p><label for="loc">Location: </label>
-							<select id="loc" name="loc" >---
-							<option value="" selected="selected">Please select</option>
+							<select id="loc" name="loc" >
+							<option value="" selected="selected">---</option>
 								<option value="opt01" id="loc01">ACT</option>
 								<option value="opt02" id="loc02">NSW</option>
 								<option value="opt03" id="loc03">NT</option>
