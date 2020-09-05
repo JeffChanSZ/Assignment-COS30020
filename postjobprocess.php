@@ -144,15 +144,15 @@ $errMsg = "";
   
         }
         
-      if ($Date=="") {
+       if ($Date=="") {
         $errMsg .= "<p>Error Date: Empty Date Fill. </p>
         <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
         }
-        // else if(!isDate($Date)){
-        //   $errMsg .= "<p>Error Date: Date must be in format DD/MM/YY </p>
-        //   <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
+        else if(!isDate($Date)){
+          $errMsg .= "<p>Error Date: Date must be in format DD/MM/YY </p>
+          <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
   
-        // }
+        }
 
         if($errMsg!=""){
           echo $errMsg;
@@ -161,13 +161,13 @@ $errMsg = "";
   
   }
 
-//   function isDate($Date) {
-//     $matches = array();
-//     $pattern = '/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{2})$/';
-//     if (!preg_match($pattern, $Date, $matches)) return false;
-//     if (!checkdate($matches[2], $matches[1], $matches[3])) return false;
-//     return true;
-// }
+  function isDate($Date) {
+    $matches = array();
+    $pattern = '/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{2})$/';
+    if (!preg_match($pattern, $Date, $matches)) return false;
+    if (!checkdate($matches[2], $matches[1], $matches[3])) return false;
+    return true;
+}
 
 
 
