@@ -49,6 +49,44 @@
 						<p><label for="job">Job Title: </label> 
 							<input type="text" id="title" name= "title" required="required" />
 						</p>
+					
+						<p><label>Position: </label></p>
+						<p><label for="pos">					
+							<input type="radio" id="pos" name="pos" value="Full Time" /> Full Time
+							</label><br>
+						<label for="pos">
+							<input type="radio" id="pos" name="pos" value="Part Time" /> Part Time
+							</label>
+						</p>
+
+						<p><label>Contract: </label></p>
+						<p><label for="contract">					
+							<input type="radio" id="contract" name="contract" value="On-going" /> On-going
+							</label><br>
+						<label for="contract">
+							<input type="radio" id="contract" name="contract" value="Fixed Term" /> Fixed Term
+							</label>
+						</p>
+
+						<p><label for="app">Application by: </label>
+						<p>
+							<label><input type="checkbox" name="app[]" value="Post" />Post</label><br>
+							<label><input type="checkbox" name="app[]" value="Mail" />Mail</label>
+						</p>
+
+						<p><label for="loc">Location: </label>
+							<select id="loc" name="loc" >
+							<option value="" selected="selected">---</option>
+								<option value="ACT" id="loc01">ACT</option>
+								<option value="NSW" id="loc02">NSW</option>
+								<option value="NT" id="loc03">NT</option>
+								<option value="QLD" id="loc04">QLD</option>
+								<option value="SA" id="loc05">SA</option>
+								<option value="TAS" id="loc06">TAS</option>
+								<option value="VIC" id="loc07">VIC</option>
+								<option value="WA" id="loc08">WA</option>
+							</select>
+						</p>
 			</fieldset>
 				
 				<p>

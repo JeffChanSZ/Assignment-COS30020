@@ -2,7 +2,10 @@
 error_reporting(0); //disable all errors and notices
 
 $Title="";
-
+$Position="";
+$Contract="";
+$Application="";
+$Location="";
 
 
 //Data validaton here -- Empty Fills
@@ -16,13 +19,44 @@ $Title="";
       <p>Return back to <a href=\"index.php\"> Home Page</a> or <a href=\"postjobform.php\"> Post Job Form Page</a></p></br>";
     }
 
-      searchFromFile($Title);
+
+
+    if (isset($_POST['pos'])  && $_POST['pos'] !="" ){
+   
+        $Position=$_POST['pos'];
+
+    }
+
+        
+    if (isset($_POST['contract'])  && $_POST['contract'] !="" ){
+   
+        $Contract=$_POST['contract'];
+
+    }
+      
+
+    if (isset($_POST['app'])  && $_POST['app'] !="" ){
+   
+        $Application=$_POST['app'];
+
+    }
+
+
+    if (isset($_POST['loc'])  && $_POST['loc'] !="" ){
+   
+        $Location=$_POST['loc'];
+
+    }
+
+      searchFromFile($Title,$Position,$Contract,$Application,$Location);
   
   }
 
 
   //Save Data to txt. files
-  function searchFromFile($Title){
+  function searchFromFile($Title,$Position,$Contract,$Application,$Location){
+    echo $Application[0];
+
     $folder = "../../data/jobposts";
     $file = '../../data/jobposts/jobposts.txt';
   
@@ -33,31 +67,46 @@ $Title="";
       array_pop($arrayLine);
       foreach ($arrayLine as $line){ 
         $arr = explode("\t", $line);
-        //   if($arr[1] == $Title){
+            //search By Title
             if(strpos($arr[1], $Title) !== false){
+                $date=date('d/m/y');
+                //Validate Closing date > today
+                if($arr[3]>=$date){
+                    //Check Position
+                    if($Position!="" && $arr[4]!=$Position){
+                        continue;
+                     }
+                     //Check Contract
+                     if($Contract!="" && $arr[5]!=$Contract){
+                        continue;
+                     }
+                     //Check Applicaion By
+                     if(count($arr)==9 && $Application!=""){
+                            if($Application[0]!=$arr[6]){
+                                continue;
+                            }
+                    }
+                     
+                     if(count($arr)==10 && $Application!=""){
+                        if($Application[0]!=$arr[6] && $Application[1]!=$arr[7] ){
+                            continue;
+                        }
+                     }
+                      //Check Location 
+                     if(count($arr)==9 && $Location!="" && $arr[7]!=$Location){
+                        continue;
+                     }
+                    
+                     if(count($arr)==10 && $Location!="" && $arr[8]!=$Location){
+                        continue;
+                     }
+            //PRINT job infromation        
             $foundPosition=true;
-            echo " <h4>Job Vacancy Information</h4>";
-            echo "Job Title: ". $arr[1] ."</br>";
-            echo "Description: ". $arr[2] ."</br>";
-            echo "Closing Date: ". $arr[3] ."</br>";
-            echo "Position: ". $arr[4] . " , ".$arr[5]. "</br>";
-            if(count($arr)==9){
-                echo "Application By : ". $arr[6] ."</br>";
-                echo "Location : ". $arr[7] ."</br>";
-
+            displayJob($arr);
             }
-            if(count($arr)==10){
-                echo "Application By : ". $arr[6]."," .$arr[7] ."</br>";
-                echo "Location : ". $arr[8] ."</br>";
-
-            }
-            echo "<p>Return to <a href=\"index.php\"> Home Page</a> or <a href=\"searchjobform.php.php\"> Search for Post another Job Vacancy </a></p></br>";
-
-
         }
           
         
-  
       }  
       if(!$foundPosition){
           echo "<h5>No Postion Found...</h5>";
@@ -67,5 +116,23 @@ $Title="";
   
     }
   
+    function displayJob($arr){
+        echo " <h4>Job Vacancy Information</h4>";
+        echo "Job Title: ". $arr[1] ."</br>";
+        echo "Description: ". $arr[2] ."</br>";
+        echo "Closing Date: ". $arr[3] ."</br>";
+        echo "Position: ". $arr[4] . " , ".$arr[5]. "</br>";
+        if(count($arr)==9){
+            echo "Application By : ". $arr[6] ."</br>";
+            echo "Location : ". $arr[7] ."</br>";
 
+        }
+        if(count($arr)==10){
+            echo "Application By : ". $arr[6]."," .$arr[7] ."</br>";
+            echo "Location : ". $arr[8] ."</br>";
+
+        }
+        echo "<p>Return to <a href=\"index.php\"> Home Page</a> or <a href=\"searchjobform.php.php\"> Search for Post another Job Vacancy </a></p></br>";
+
+    }
   ?>
