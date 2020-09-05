@@ -55,8 +55,6 @@ $Location="";
 
   //Save Data to txt. files
   function searchFromFile($Title,$Position,$Contract,$Application,$Location){
-    echo $Application[0];
-
     $folder = "../../data/jobposts";
     $file = '../../data/jobposts/jobposts.txt';
   
@@ -81,14 +79,14 @@ $Location="";
                         continue;
                      }
                      //Check Applicaion By
-                     if(count($arr)==9 && $Application!=""){
+                     if(count($arr)==9 && $Application!="" ){
                             if($Application[0]!=$arr[6]){
                                 continue;
                             }
                     }
                      
                      if(count($arr)==10 && $Application!=""){
-                        if($Application[0]!=$arr[6] && $Application[1]!=$arr[7] ){
+                        if($Application[0]!=$arr[6] || $Application[1]!=$arr[7] ){
                             continue;
                         }
                      }
