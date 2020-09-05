@@ -41,13 +41,13 @@
 
 		<h1>Job Vacancy Posting System</h1>
 
-			<form class="form" method="get" action="searchjobprocess.php">
+			<form class="form" method="post" action="searchjobprocess.php">
 			<br>
 			<br>
 			<fieldset>
 					<legend>Search</legend>
 						<p><label for="job">Job Title: </label> 
-							<input type="text" id="job" name= "job" />
+							<input type="text" id="title" name= "title" required="required" />
 						</p>
 			</fieldset>
 				
