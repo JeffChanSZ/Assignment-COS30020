@@ -57,7 +57,10 @@
 								of information technology throughout the organisation." required="required"></textarea>
 						
 						<p><label for="date">Closing Date: </label> 
-							<input type="text" id="date" name= "date" required="required"/>
+							<!-- <input type="text" id="date" name= "date" required="required"
+							placeholder=" dd/mm/yy"/> -->
+							<input type="text" id="date" name= "date" required="required" value="<?php echo date('d/m/y');?>"/>
+
 						</p>
 
 						<p><label>Position: </label></p>
@@ -87,14 +90,14 @@
 						<p><label for="loc">Location: </label>
 							<select id="loc" name="loc" >
 							<option value="" selected="selected">---</option>
-								<option value="opt01" id="loc01">ACT</option>
-								<option value="opt02" id="loc02">NSW</option>
-								<option value="opt03" id="loc03">NT</option>
-								<option value="opt04" id="loc04">QLD</option>
-								<option value="opt05" id="loc05">SA</option>
-								<option value="opt06" id="loc06">TAS</option>
-								<option value="opt07" id="loc07">VIC</option>
-								<option value="opt08" id="loc08">WA</option>
+								<option value="ACT" id="loc01">ACT</option>
+								<option value="NSW" id="loc02">NSW</option>
+								<option value="NT" id="loc03">NT</option>
+								<option value="QLD" id="loc04">QLD</option>
+								<option value="SA" id="loc05">SA</option>
+								<option value="TAS" id="loc06">TAS</option>
+								<option value="VIC" id="loc07">VIC</option>
+								<option value="WA" id="loc08">WA</option>
 							</select>
 						</p>
 			</fieldset>
