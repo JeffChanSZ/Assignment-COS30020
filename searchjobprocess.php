@@ -79,12 +79,19 @@ $Location="";
                         continue;
                      }
                      //Check Applicaion By
+                     //this will skip data with 1 application but 2 filter
+                     if(count($arr)==9 && count($Application)==2){
+                        continue;
+                    
+                     }
+                     //this will skip data with 1 application but 1 filter and not match
                      if(count($arr)==9 && $Application!="" ){
+                         echo $Application[1];
                             if($Application[0]!=$arr[6]){
                                 continue;
                             }
                     }
-                     
+                    //this will skip data with 2 application but 2 filter and not match
                      if(count($arr)==10 && $Application!=""){
                         if($Application[0]!=$arr[6] || $Application[1]!=$arr[7] ){
                             continue;
