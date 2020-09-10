@@ -53,8 +53,7 @@
 							<input type="text" id="title" name= "title" placeholder="IT Manager" required="required"/>
 						</p>
 						<p><label class="desc">Description: </label></p>  
-							<textarea class="desc" name="desc" rows="5" cols="30" placeholder="This position promotes and supports the use
-								of information technology throughout the organisation." required="required"></textarea>
+							<textarea class="desc" name="desc" rows="5" cols="30" placeholder="This position promotes and supports the use of information technology throughout the organisation." required="required"></textarea>
 						
 						<p><label for="date">Closing Date: </label> 
 							<!-- <input type="text" id="date" name= "date" required="required"
