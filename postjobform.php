@@ -57,7 +57,7 @@
 								of information technology throughout the organisation." required="required"></textarea>
 						
 						<p><label for="date">Closing Date: </label> 
-							<input type="text" id="date" name= "date" required="required"/>
+							<input type="text" id="date" name= "date" value="" required="required"/>
 						</p>
 
 						<p><label>Position: </label></p>
