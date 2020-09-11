@@ -53,11 +53,11 @@
                 
 
                     <div class="about">
-                        <img src="images/discussion1.png" alt="Discussion Point1" class="hoverimage" /><br>
+                        <img src="images/discussion1.PNG" alt="Discussion Point1" class="hoverimage" /><br>
                         <p>General Question about Task 7 Advanced Search</p>
-                        <img src="images/discussion2.png" alt="Discussion Point2" class="hoverimage" /><br>
+                        <img src="images/discussion2.PNG" alt="Discussion Point2" class="hoverimage" /><br>
                         <p>General Question about Task 7 Advanced Search</p>
-                        <img src="images/discussion3.png" alt="Discussion Point3" class="hoverimage" /><br>
+                        <img src="images/discussion3.PNG" alt="Discussion Point3" class="hoverimage" /><br>
                         <p>CSS Question about self opinion and suggestion</p>
                     </div>
 
