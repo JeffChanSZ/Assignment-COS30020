@@ -223,3 +223,26 @@ description: [CSS styles of PHP Assignment, Design of the website]
       font-weight: bold;
       text-decoration: underline;
   }
+
+  /*About Page*/
+
+   .profiles .container .about{
+    max-width: 960px;
+  }
+  
+    .about {
+      max-width: 960px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: underline;
+  }
+
+  img .discussion{
+    display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 30%;
+    margin: 1%;
+  }
+
+  
