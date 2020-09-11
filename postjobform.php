@@ -63,24 +63,24 @@
 						</p>
 
 						<p><label>Position: </label></p>
-						<p><label for="pos">					
-							<input type="radio" id="pos" name="pos" value="Full Time" /> Full Time
+						<p><label for="pos1">					
+							<input type="radio" id="pos1" name="pos" value="Full Time" /> Full Time
 							</label><br>
-						<label for="pos">
-							<input type="radio" id="pos" name="pos" value="Part Time" /> Part Time
+						<label for="pos2">
+							<input type="radio" id="pos2" name="pos" value="Part Time" /> Part Time
 							</label>
 						</p>
 
 						<p><label>Contract: </label></p>
-						<p><label for="contract">					
-							<input type="radio" id="contract" name="contract" value="On-going" /> On-going
+						<p><label for="contract1">					
+							<input type="radio" id="contract1" name="contract" value="On-going" /> On-going
 							</label><br>
-						<label for="contract">
-							<input type="radio" id="contract" name="contract" value="Fixed Term" /> Fixed Term
+						<label for="contract2">
+							<input type="radio" id="contract2" name="contract" value="Fixed Term" /> Fixed Term
 							</label>
 						</p>
 
-						<p><label for="app">Application by: </label>
+						<p><label class="app">Application by: </label>
 						<p>
 							<label><input type="checkbox" name="app[]" value="Post" />Post</label><br>
 							<label><input type="checkbox" name="app[]" value="Mail" />Mail</label>

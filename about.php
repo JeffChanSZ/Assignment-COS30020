@@ -32,14 +32,15 @@
 	</div>
 
 <!--About-->
-	<section id="profiles">
-		<div id="container">
+	<section class="profiles">
+		<div class="container">
+        <div class="quote">
             <h1>About</h1>
 			<br>
                 <ul>
-                    <li><?php
-                        echo 'PHP version: ' . phpversion();
-                    ?></li>
+                    <li>
+                        <?php echo 'PHP version: ' . phpversion();?>
+                    </li>
 				    <li>Most of the tasks are completed except for Task 8 a. Properly sort the result </li>
 				    <li>Special Features ---
                         <ol>
@@ -50,19 +51,20 @@
                         </ol></li>
                 </ul>
                 
-                <p>
-                    <div id="about">
-                        <img id="discussion" src="images/discussion1.png" alt="Discussion Point1"></br>
+
+                    <div class="about">
+                        <img src="images/discussion1.png" alt="Discussion Point1" class="hoverimage" /><br>
                         <p>General Question about Task 7 Advanced Search</p>
-                        <img id="discussion" src="images/discussion2.png" alt="Discussion Point2"></br>
+                        <img src="images/discussion2.png" alt="Discussion Point2" class="hoverimage" /><br>
                         <p>General Question about Task 7 Advanced Search</p>
-                        <img id="discussion" src="images/discussion3.png" alt="Discussion Point3"></br>
+                        <img src="images/discussion3.png" alt="Discussion Point3" class="hoverimage" /><br>
                         <p>CSS Question about self opinion and suggestion</p>
                     </div>
-                </p>
+
     			    
                 <p><a class="returnIndex" href="index.php">Home</a></p>
-		</div>
+        </div>
+        </div>
 	</section>
 
 

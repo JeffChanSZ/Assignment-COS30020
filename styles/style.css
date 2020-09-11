@@ -230,6 +230,11 @@ description: [CSS styles of PHP Assignment, Design of the website]
     max-width: 960px;
   }
   
+    .container .quote h1{
+      font-weight: bold;
+      font-size: 16px;
+    }
+
     .about {
       max-width: 960px;
       font-size: 16px;
@@ -237,7 +242,7 @@ description: [CSS styles of PHP Assignment, Design of the website]
       text-decoration: underline;
   }
 
-  img .discussion{
+  img .hoverimage{
     display: inline-block;
     max-width: 98%;
     height: auto;

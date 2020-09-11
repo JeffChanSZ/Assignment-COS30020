@@ -97,7 +97,7 @@ $errMsg = "";
 
 
       /**
-       * IF NO Validation Error
+       * IF NO Validation Error -- save into Txt. file
        **/
       saveDataToFile($ID, $Title, $Description, $Date, $Position, $Contract, $Application, $Location);
   
@@ -163,6 +163,7 @@ $errMsg = "";
   
   }
 
+  //Check Format of date
   function isDate($Date) {
     $matches = array();
     $pattern = '/^([0-9]{1,2})\\/([0-9]{1,2})\\/([0-9]{2})$/';
@@ -196,9 +197,10 @@ $errMsg = "";
     }  
   }
   else{  
-  if (!is_dir($folder)) mkdir($folder, 0777, true);
+  if (!is_dir($folder)) mkdir($folder, 0777, true); //Make new directory if directory not found
   }
-
+  
+  //Store data in txt.file with format
   $contents = $ID ."\t".
                 $Title ."\t" .
                 $Description ."\t". 
